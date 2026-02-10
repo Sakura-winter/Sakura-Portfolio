@@ -73,43 +73,37 @@ npm run preview
 
 ## 🚀 Deployment
 
-### GitHub Pages (Automatic)
+### Vercel (Free)
 
-This portfolio is configured for automatic deployment to GitHub Pages:
+1. Push your code to GitHub.
+2. Import the repo in Vercel.
+3. Set:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. Deploy.
 
-1. **Enable GitHub Pages:**
-   - Go to your repository → Settings → Pages
-   - Under "Source", select **GitHub Actions**
-   - Save the settings
+### GitHub Pages (Manual)
 
-2. **Push to main branch:**
-   ```bash
-   git add .
-   git commit -m "Deploy to GitHub Pages"
-   git push origin main
-   ```
+This repo is configured to work on GitHub Pages via a special build mode.
 
-3. **Wait for deployment:**
-   - GitHub Actions will automatically build and deploy your site
-   - Check the Actions tab to see deployment progress
-   - Your site will be live at: `https://sakura-winter.github.io/Sakura-Portfolio/`
+1. Build for GitHub Pages:
 
-**Note:** The first deployment may take a few minutes. Subsequent pushes to `main` will trigger automatic deployments.
+```bash
+npm run build:gh
+```
 
-### Manual Deployment
+2. Publish `dist/` to a `gh-pages` branch (one simple way):
 
-If you prefer to deploy manually:
+```bash
+npx --yes gh-pages -d dist
+```
 
-1. Build the project:
-   ```bash
-   npm run build
-   ```
+3. Enable Pages:
+   - Repo → Settings → Pages
+   - Source: **Deploy from a branch**
+   - Branch: `gh-pages` / folder: `/ (root)`
 
-2. Push the `dist` folder to the `gh-pages` branch:
-   ```bash
-   npm install -g gh-pages
-   gh-pages -d dist
-   ```
+Your site will be live at `https://sakura-winter.github.io/Sakura-Portfolio/`.
 
 ## 📁 Project Structure
 

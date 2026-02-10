@@ -5,7 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/Sakura-Portfolio/', // GitHub Pages base path
+      // For GitHub Pages (repo pages) we need a sub-path base.
+      // For Vercel (and local dev) we want root.
+      base: mode === 'gh-pages' ? '/Sakura-Portfolio/' : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
