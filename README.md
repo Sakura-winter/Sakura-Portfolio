@@ -11,7 +11,7 @@
 
 *A nostalgic terminal-inspired portfolio showcasing backend engineering, cloud infrastructure, and DevOps expertise.*
 
-[🌐 Live Demo](#) • [📧 Contact](mailto:sumitkum1819@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/sumit-alexithymia) • [🐙 GitHub](https://github.com/Sakura-winter)
+[🌐 Live Demo](https://sakura-winter.github.io/Sakura-Portfolio/) • [📧 Contact](mailto:sumitkum1819@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/sumit-alexithymia) • [🐙 GitHub](https://github.com/Sakura-winter)
 
 </div>
 
@@ -70,6 +70,46 @@
 npm run build
 npm run preview
 ```
+
+## 🚀 Deployment
+
+### GitHub Pages (Automatic)
+
+This portfolio is configured for automatic deployment to GitHub Pages:
+
+1. **Enable GitHub Pages:**
+   - Go to your repository → Settings → Pages
+   - Under "Source", select **GitHub Actions**
+   - Save the settings
+
+2. **Push to main branch:**
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+3. **Wait for deployment:**
+   - GitHub Actions will automatically build and deploy your site
+   - Check the Actions tab to see deployment progress
+   - Your site will be live at: `https://sakura-winter.github.io/Sakura-Portfolio/`
+
+**Note:** The first deployment may take a few minutes. Subsequent pushes to `main` will trigger automatic deployments.
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Push the `dist` folder to the `gh-pages` branch:
+   ```bash
+   npm install -g gh-pages
+   gh-pages -d dist
+   ```
 
 ## 📁 Project Structure
 
