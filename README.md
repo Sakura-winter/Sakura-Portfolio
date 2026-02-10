@@ -135,7 +135,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 <div align="center">
 
-**Built with ❤️ using React, TypeScript, and Vite**
+
 
 *"Architecting high-availability realms and optimizing the mana flow of data."*
 
